@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definição das cores personalizadas */
+.bg-primary {
+  background-color: #0C9238;
+}
+
+.bg-secondary {
+  background-color: #58AF31;
+}
+
+.bg-dark {
+  background-color: #2E2D2C;
+}
+
+.bg-darker {
+  background-color: #0D0D0D;
+}
+
+.text-primary {
+  color: #0C9238;
+}
+
+.text-secondary {
+  color: #58AF31;
+}
+
+.text-dark {
+  color: #2E2D2C;
+}
+
+.text-darker {
+  color: #0D0D0D;
+}
+
+.btn {
+  @apply font-bold py-2 px-4 rounded-lg;
+}
+
+.btn-primary {
+  background-color: #0C9238;
+  @apply text-white;
+}
+
+.btn-secondary {
+  background-color: #58AF31;
+  @apply text-white;
+}
+
+.input {
+  @apply border rounded-lg p-2 w-full mb-4;
+  border-color: #2E2D2C;
+}
+
+.card {
+  @apply rounded-lg shadow-md p-4 m-2;
+  background-color: white;
+  border: 1px solid #2E2D2C;
+}

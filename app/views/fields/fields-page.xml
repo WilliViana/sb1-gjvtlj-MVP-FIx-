@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="page">
+    <ActionBar title="Quadras de Futebol" class="action-bar" color="white" backgroundColor="#0C9238">
+        <ActionItem ios.position="right" android.position="actionBar" 
+                   text="+" tap="{{ onAddField }}" />
+    </ActionBar>
+
+    <StackLayout class="p-4">
+        <ListView items="{{ fields }}" height="100%" separatorColor="transparent">
+            <ListView.itemTemplate>
+                <StackLayout class="card">
+                    <Label text="{{ name }}" class="font-bold text-lg text-dark" />
+                    <Label text="{{ address }}" class="text-dark" />
+                    <Label text="{{ 'R$ ' + price }}" class="text-primary font-bold" />
+                    <Label text="{{ available ? 'Disponível' : 'Indisponível' }}" 
+                           class="{{ available ? 'text-primary' : 'text-red-600' }}" />
+                </StackLayout>
+            </ListView.itemTemplate>
+        </ListView>
+    </StackLayout>
+</Page>

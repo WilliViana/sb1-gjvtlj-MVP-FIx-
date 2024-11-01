@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="page">
+    <ActionBar title="Times" class="action-bar">
+        <ActionItem ios.position="right" android.position="actionBar" 
+                   text="+" tap="{{ onAddTeam }}" />
+    </ActionBar>
+
+    <StackLayout class="p-4">
+        <ListView items="{{ teams }}" height="100%" separatorColor="transparent">
+            <ListView.itemTemplate>
+                <StackLayout class="card">
+                    <Label text="{{ name }}" class="font-bold text-lg" />
+                    <Label text="{{ 'Capitão: ' + captain }}" class="text-gray-600" />
+                    <Label text="{{ 'Jogadores: ' + players.length }}" class="text-gray-600" />
+                </StackLayout>
+            </ListView.itemTemplate>
+        </ListView>
+    </StackLayout>
+</Page>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabView xmlns="http://schemas.nativescript.org/tns.xsd" selectedIndex="0" androidTabsPosition="bottom" 
+        selectedTabTextColor="#0C9238" tabTextColor="#2E2D2C">
+    <TabViewItem title="Quadras" iconSource="res://tabicon_fields">
+        <Frame defaultPage="views/fields/fields-page" />
+    </TabViewItem>
+    <TabViewItem title="Times" iconSource="res://tabicon_teams">
+        <Frame defaultPage="views/teams/teams-page" />
+    </TabViewItem>
+    <TabViewItem title="Reservas" iconSource="res://tabicon_bookings">
+        <Frame defaultPage="views/bookings/bookings-page" />
+    </TabViewItem>
+</TabView>

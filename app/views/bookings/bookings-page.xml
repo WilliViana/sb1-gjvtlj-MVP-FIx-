@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="page">
+    <ActionBar title="Minhas Reservas" class="action-bar" />
+    
+    <StackLayout class="p-4">
+        <ListView items="{{ bookings }}" height="100%" separatorColor="transparent">
+            <ListView.itemTemplate>
+                <StackLayout class="card">
+                    <Label text="{{ fieldName }}" class="font-bold text-lg" />
+                    <Label text="{{ startTime + ' - ' + endTime }}" class="text-gray-600" />
+                    <Label text="{{ status === 'pending' ? 'Pendente' : 
+                                  status === 'confirmed' ? 'Confirmada' : 'Cancelada' }}" 
+                           class="{{ status === 'confirmed' ? 'text-green-600' : 
+                                   status === 'pending' ? 'text-yellow-600' : 'text-red-600' }}" />
+                    <Label text="{{ paymentStatus === 'pending' ? 'Pagamento Pendente' : 
+                                  'Pagamento Concluído' }}"
+                           class="{{ paymentStatus === 'completed' ? 'text-green-600' : 'text-yellow-600' }}" />
+                </StackLayout>
+            </ListView.itemTemplate>
+        </ListView>
+    </StackLayout>
+</Page>

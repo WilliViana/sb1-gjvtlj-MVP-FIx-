@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="{{ field.name }}">
+        <NavigationButton text="Voltar" android.systemIcon="ic_menu_back" />
+    </ActionBar>
+
+    <ScrollView>
+        <StackLayout class="p-4">
+            <Image src="{{ field.imageUrl }}" class="w-full h-48 rounded-lg" stretch="aspectFill" />
+            
+            <Label text="{{ field.name }}" class="text-2xl font-bold mt-4" />
+            <Label text="{{ field.address }}" class="text-gray-600 mb-2" />
+            <Label text="{{ 'R$ ' + field.price }}" class="text-xl text-green-600 font-bold" />
+            
+            <Label text="Selecione Data e Horário" class="text-lg font-bold mt-4" />
+            <DatePicker date="{{ selectedDate }}" class="input" />
+            
+            <GridLayout columns="*, *" class="mt-2">
+                <TimePicker col="0" time="{{ startTime }}" class="input" />
+                <TimePicker col="1" time="{{ endTime }}" class="input" />
+            </GridLayout>
+
+            <Label text="Selecione o Time" class="text-lg font-bold mt-4" />
+            <DropDown items="{{ teams }}" selectedIndex="{{ selectedTeamIndex }}" 
+                      class="input" />
+
+            <Button text="Reservar Agora" tap="{{ onBookField }}" 
+                    class="btn btn-primary mt-4" 
+                    isEnabled="{{ field.available }}" />
+        </StackLayout>
+    </ScrollView>
+</Page>
